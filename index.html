@@ -10,9 +10,10 @@
 body{background:linear-gradient(120deg,#0B0D15,#101a3a,#0f1a2e,#0B0D15);background-size:300% 300%;animation:gradientFlow 18s ease infinite;color:#fff;font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,rgba(255,157,51,0.12),transparent 40%),radial-gradient(circle at 80% 25%,rgba(45,86,143,0.2),transparent 45%);mix-blend-mode:screen;opacity:.8}
 @keyframes gradientFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .container{max-width:960px;margin:0 auto;padding:0 24px}
-header{padding:48px 0 32px;text-align:center}
-header img{height:40px;margin-bottom:24px}
+header{padding:88px 0 44px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+header img{height:104px;max-width:min(460px,80vw);width:auto;display:block;margin:0 auto 34px;filter:drop-shadow(0 16px 32px rgba(0,0,0,.45)) drop-shadow(0 0 24px rgba(255,157,51,.22));animation:logoFloat 4.8s ease-in-out infinite}
 .update-badge{display:inline-block;background:rgba(255,157,51,0.12);color:#FF9D33;font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px}
 h1{font-size:clamp(28px,5vw,42px);font-weight:800;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,rgba(255,255,255,0.7) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .subtitle{color:rgba(255,255,255,0.5);font-size:15px}
@@ -45,7 +46,8 @@ svg text{font-family:'Inter',sans-serif}
 @media(max-width:640px){
   .grid-2,.grid-3{grid-template-columns:1fr}
   .card{padding:20px}
-  header{padding:32px 0 24px}
+  header{padding:56px 0 30px}
+  header img{height:84px;margin-bottom:24px}
 }
 </style>
 </head>
